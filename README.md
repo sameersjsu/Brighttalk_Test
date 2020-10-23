@@ -4,10 +4,21 @@ Please develop the automation task using this simple framework.
 I have made the following changes :
 
 1) Have created one tag i.e. APITest and mentioned same in Hook- we don't need to run before and after hook for API test.
+
 2)Created RestUtil class for get and post response.
+
 3)In step definition added all api test steps and implemented logic which we need to verify based on scenario.
+
 4)Comment out few depandancies  in pom.xml due to conflict- was getting SSLHandshakeException while setting up
+
 5)Added parameter's and 2 more test scenario's in API-Test.feature file
+
+
+
+
+
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -18,6 +29,7 @@ To run the tests just go to your local repository and run Maven test in command 
 "mvn clean test"
 
 sameers-MacBook-Pro:brighttalktech-automation-test-task-maven sameermylavarapu$ mvn clean test
+
 [INFO] Scanning for projects...
 [WARNING] 
 [WARNING] Some problems were encountered while building the effective model for AutomationTest:BrightTalkTest:jar:0.0.1-SNAPSHOT
@@ -36,6 +48,7 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/groov
 [WARNING] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
 Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/3.0.6/groovy-3.0.6.jar
 Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy/3.0.6/groovy-3.0.6.jar (8.0 MB at 18 MB/s)
+
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ BrightTalkTest ---
 [INFO] Deleting /Users/sameermylavarapu/Downloads/brighttalktech-automation-test-task-maven/target
@@ -59,6 +72,9 @@ Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/groov
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ BrightTalkTest ---
 [INFO] Surefire report directory: /Users/sameermylavarapu/Downloads/brighttalktech-automation-test-task-maven/target/surefire-reports
 
+
+
+
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
@@ -71,6 +87,8 @@ WARNING: Illegal reflective access by cucumber.deps.com.thoughtworks.xstream.cor
 WARNING: Please consider reporting this to the maintainers of cucumber.deps.com.thoughtworks.xstream.core.util.Fields
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
+
+
 
   Scenario: Should see LIST USERS of all existing users              # src/test/java/API-Test.feature:4
     Given I get the default list of users for on 1st page            # StepDefinition.i_get_the_default_list_of_users_for_on_st_page(String)
@@ -87,29 +105,35 @@ WARNING: All illegal access operations will be denied in a future release
     Given I create user with following "<Name>" and "<Job>"
     Then response should contain "<Name>" and "<Job>" with others data
 
+
     Examples: 
 
   @APITest
   Scenario Outline: CREATE a user                                       # src/test/java/API-Test.feature:23
     Given I create user with following "Peter" and "Manager"            # StepDefinition.i_create_user_with_following_and(String,String)
     Then response should contain "Peter" and "Manager" with others data # StepDefinition.response_should_contain_and_with_others_data(String,String)
+    
 
   @APITest
   Scenario Outline: CREATE a user                                    # src/test/java/API-Test.feature:24
     Given I create user with following "Liza" and "Sales"            # StepDefinition.i_create_user_with_following_and(String,String)
     Then response should contain "Liza" and "Sales" with others data # StepDefinition.response_should_contain_and_with_others_data(String,String)
+    
 
   Scenario: Should see list of users with DELAYED RESPONSE # src/test/java/API-Test.feature:26
     Given I wait for user list to load                     # StepDefinition.i_wait_for_user_list_to_load()
     Then I should see that every user has a unique id      # StepDefinition.i_should_see_that_every_user_has_a_unique_id()
+    
 
   Scenario: Should see SINGLE USER data   # src/test/java/API-Test.feature:30
     Given I make a search for user 3      # StepDefinition.i_make_a_search_for_user(String)
     Then I should see following user data # StepDefinition.i_should_see_following_user_data(DataTable)
+    
 
   Scenario: Should see SINGLE USER NOT FOUND error code # src/test/java/API-Test.feature:35
     Given I make a search for user 23                   # StepDefinition.i_make_a_search_for_user(String)
     Then I receive error code 404 in response           # StepDefinition.i_receive_error_code_in_response(int)
+    
 
   #Added 2 new scenario
   Scenario: Should see SINGLE Resource data   # src/test/java/API-Test.feature:40
@@ -119,6 +143,8 @@ WARNING: All illegal access operations will be denied in a future release
   Scenario: Should see SINGLE Resource NOT FOUND error code # src/test/java/API-Test.feature:45
     Given I make a search for resource 23                   # StepDefinition.i_make_a_search_for_resource(String)
     Then I receive error code 404 in response               # StepDefinition.i_receive_error_code_in_response(int)
+    
+    
 
 10 Scenarios (10 passed)
 19 Steps (19 passed)
