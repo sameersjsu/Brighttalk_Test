@@ -1,0 +1,498 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Should see LIST USERS of all existing users",
+        "description": "",
+        "id": "api-test;should-see-list-users-of-all-existing-users",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1756465898,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get the default list of users for on 1st page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 39
+                }
+              ],
+              "location": "StepDefinition.i_get_the_default_list_of_users_for_on_st_page(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 119110382,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the list of all users",
+            "match": {
+              "location": "StepDefinition.i_get_the_list_of_all_users()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11815026,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see total users count equals to number of user ids",
+            "match": {
+              "location": "StepDefinition.i_should_see_total_users_count_equals_to_number_of_user_ids()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "LOGIN - SUCCESSFUL by a user",
+        "description": "",
+        "id": "api-test;login---successful-by-a-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1305754119,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I login succesfully with following data",
+            "match": {
+              "location": "StepDefinition.i_login_succesfully_with_following_data(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "eve.holt@reqres.in",
+                  "cityslicka"
+                ],
+                "line": 11
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "LOGIN - UNSUCCESSFUL by a user",
+        "description": "",
+        "id": "api-test;login---unsuccessful-by-a-user",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 403136914,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I login unsuccesfully with following data",
+            "match": {
+              "location": "StepDefinition.i_login_unsuccesfully_with_following_data(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "eve.holt@reqres.in",
+                  ""
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "CREATE a user",
+        "description": "",
+        "id": "api-test;create-a-user;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 412351598,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I create user with following \"Peter\" and \"Manager\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Peter",
+                  "offset": 30
+                },
+                {
+                  "val": "Manager",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefinition.i_create_user_with_following_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 30058480,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "response should contain \"Peter\" and \"Manager\" with others data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Peter",
+                  "offset": 25
+                },
+                {
+                  "val": "Manager",
+                  "offset": 37
+                }
+              ],
+              "location": "StepDefinition.response_should_contain_and_with_others_data(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@APITest"
+          }
+        ]
+      },
+      {
+        "line": 24,
+        "name": "CREATE a user",
+        "description": "",
+        "id": "api-test;create-a-user;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 419958807,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I create user with following \"Liza\" and \"Sales\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Liza",
+                  "offset": 30
+                },
+                {
+                  "val": "Sales",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefinition.i_create_user_with_following_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21432483,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "response should contain \"Liza\" and \"Sales\" with others data",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Liza",
+                  "offset": 25
+                },
+                {
+                  "val": "Sales",
+                  "offset": 36
+                }
+              ],
+              "location": "StepDefinition.response_should_contain_and_with_others_data(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@APITest"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Should see list of users with DELAYED RESPONSE",
+        "description": "",
+        "id": "api-test;should-see-list-of-users-with-delayed-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5605305329,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I wait for user list to load",
+            "match": {
+              "location": "StepDefinition.i_wait_for_user_list_to_load()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9176965,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I should see that every user has a unique id",
+            "match": {
+              "location": "StepDefinition.i_should_see_that_every_user_has_a_unique_id()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "Should see SINGLE USER data",
+        "description": "",
+        "id": "api-test;should-see-single-user-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1051696886,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I make a search for user 3",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinition.i_make_a_search_for_user(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22835311,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I should see following user data",
+            "match": {
+              "location": "StepDefinition.i_should_see_following_user_data(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Emma",
+                  "emma.wong@reqres.in"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 35,
+        "name": "Should see SINGLE USER NOT FOUND error code",
+        "description": "",
+        "id": "api-test;should-see-single-user-not-found-error-code",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 961101591,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I make a search for user 23",
+            "match": {
+              "arguments": [
+                {
+                  "val": "23",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinition.i_make_a_search_for_user(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 414031,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "I receive error code 404 in response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefinition.i_receive_error_code_in_response(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 39,
+            "value": "#Added 2 new scenario"
+          }
+        ],
+        "line": 40,
+        "name": "Should see SINGLE Resource data",
+        "description": "",
+        "id": "api-test;should-see-single-resource-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1589616425,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I make a search for resource 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.i_make_a_search_for_resource(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15873961,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I should see following Resource data",
+            "match": {
+              "location": "StepDefinition.i_should_see_following_Resource_data(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "2",
+                  "fuchsia rose"
+                ],
+                "line": 43
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 45,
+        "name": "Should see SINGLE Resource NOT FOUND error code",
+        "description": "",
+        "id": "api-test;should-see-single-resource-not-found-error-code",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1584640235,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "I make a search for resource 23",
+            "match": {
+              "arguments": [
+                {
+                  "val": "23",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefinition.i_make_a_search_for_resource(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67822,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I receive error code 404 in response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 21
+                }
+              ],
+              "location": "StepDefinition.i_receive_error_code_in_response(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "API test",
+    "description": "",
+    "id": "api-test",
+    "keyword": "Feature",
+    "uri": "src/test/java/API-Test.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@APITest"
+      }
+    ]
+  }
+]
