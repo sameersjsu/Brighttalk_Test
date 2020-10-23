@@ -5,14 +5,14 @@ I have made the following changes :
 
 1) Have created one tag i.e. APITest and mentioned same in Hook- we don't need to run before and after hook for API test.
 
-2)Created RestUtil class for get and post response.
+2)Created RestUtil class for get and post response.Implemented RestAssured for making the calls.
 
 3)In step definition added all api test steps and implemented logic which we need to verify based on scenario.
 
 4)Comment out few depandancies  in pom.xml due to conflict- was getting SSLHandshakeException while setting up
 
 5)Added parameter's and 2 more test scenario's in API-Test.feature file
-
+Please clone this repo and run from your local. The results are also captured in the cucumber reports folder.
 
 
 
